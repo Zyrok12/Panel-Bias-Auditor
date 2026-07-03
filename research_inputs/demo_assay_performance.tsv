@@ -1,0 +1,7 @@
+chrom	start	end	name	mean_depth	callable_fraction	status	false_negative_count	false_positive_count	total_variant_count
+chrDemo	0	100	demo_high_gc_dropout	35	0.52	low_coverage	1	0	12
+chrDemo	100	200	demo_low_gc_dropout	42	0.61	low_callability	1	0	10
+chrDemo	200	300	demo_high_gc_fp_cluster	85	0.88	pass	0	1	11
+chrDemo	300	400	demo_low_gc_low_callability	60	0.70	pass	0	0	9
+chrDemo	400	500	demo_clean_control_1	520	0.99	pass	0	0	12
+chrDemo	500	600	demo_clean_control_2	510	0.98	pass	0	0	10

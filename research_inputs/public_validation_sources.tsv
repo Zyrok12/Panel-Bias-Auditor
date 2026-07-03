@@ -1,0 +1,5 @@
+source_id	domain	validation_use	primary_url	notes
+giab_germline_release	germline	Benchmark VCF/BED and high-confidence/callable regions for public validation.	https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/release/	Use matching genome build and sample release; do not mix GRCh37 and GRCh38 coordinates.
+giab_data_indexes	germline	Public raw reads and alignments for deeper coverage/callability extraction.	https://github.com/genome-in-a-bottle/giab_data_indexes	Large files should not be committed; store manifests/checksums and derived summaries.
+giab_stratifications	technical_context	Difficult-region BEDs for low complexity, GC, mappability and other contexts.	https://github.com/genome-in-a-bottle/genome-stratifications	Useful for benchmarking where false positives/false negatives cluster by genomic context.
+cancer_giab	human_somatic_cancer	Public tumor-normal HG008 resources and draft somatic benchmarks.	https://www.nist.gov/programs-projects/cancer-genome-bottle	Best public path for somatic/cancer validation; current releases are draft benchmark resources.

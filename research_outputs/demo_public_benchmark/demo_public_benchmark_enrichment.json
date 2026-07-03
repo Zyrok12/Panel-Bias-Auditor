@@ -1,0 +1,125 @@
+{
+  "by_risk_category": {
+    "gc_extreme": {
+      "nonrisk_fail_bases": 0,
+      "nonrisk_failure_rate": 0.0,
+      "nonrisk_pass_bases": 100,
+      "odds_ratio_haldane": 201.0,
+      "relative_risk": null,
+      "risk_bases": 400,
+      "risk_fail_bases": 200,
+      "risk_failure_rate": 0.5,
+      "risk_pass_bases": 200
+    },
+    "homopolymer": {
+      "nonrisk_fail_bases": 0,
+      "nonrisk_failure_rate": 0.0,
+      "nonrisk_pass_bases": 100,
+      "odds_ratio_haldane": 201.0,
+      "relative_risk": null,
+      "risk_bases": 400,
+      "risk_fail_bases": 200,
+      "risk_failure_rate": 0.5,
+      "risk_pass_bases": 200
+    }
+  },
+  "overall_enrichment": {
+    "nonrisk_fail_bases": 0,
+    "nonrisk_failure_rate": 0.0,
+    "nonrisk_pass_bases": 100,
+    "odds_ratio_haldane": 201.0,
+    "relative_risk": null,
+    "risk_fail_bases": 200,
+    "risk_failure_rate": 0.5,
+    "risk_pass_bases": 200
+  },
+  "parameters": {
+    "min_callable_fraction": null,
+    "min_depth": null
+  },
+  "performance_rows": [
+    {
+      "callable_fraction": 0.8,
+      "chrom": "chrDemo",
+      "end": 300,
+      "false_negative_count": 0,
+      "false_positive_count": 0,
+      "is_failure": true,
+      "length": 100,
+      "mean_depth": null,
+      "name": "demo_high_gc_region_2",
+      "risk_overlap_bases": 100,
+      "risk_overlap_fraction": 1.0,
+      "start": 200,
+      "status": "low_callability"
+    },
+    {
+      "callable_fraction": 0.4,
+      "chrom": "chrDemo",
+      "end": 200,
+      "false_negative_count": 0,
+      "false_positive_count": 0,
+      "is_failure": true,
+      "length": 100,
+      "mean_depth": null,
+      "name": "demo_low_gc_region",
+      "risk_overlap_bases": 100,
+      "risk_overlap_fraction": 1.0,
+      "start": 100,
+      "status": "low_callability"
+    },
+    {
+      "callable_fraction": 1.0,
+      "chrom": "chrDemo",
+      "end": 100,
+      "false_negative_count": 0,
+      "false_positive_count": 0,
+      "is_failure": false,
+      "length": 100,
+      "mean_depth": null,
+      "name": "demo_high_gc_region",
+      "risk_overlap_bases": 100,
+      "risk_overlap_fraction": 1.0,
+      "start": 0,
+      "status": "pass"
+    },
+    {
+      "callable_fraction": 1.0,
+      "chrom": "chrDemo",
+      "end": 400,
+      "false_negative_count": 0,
+      "false_positive_count": 0,
+      "is_failure": false,
+      "length": 100,
+      "mean_depth": null,
+      "name": "demo_low_gc_region_2",
+      "risk_overlap_bases": 100,
+      "risk_overlap_fraction": 1.0,
+      "start": 300,
+      "status": "pass"
+    },
+    {
+      "callable_fraction": 1.0,
+      "chrom": "chrDemo",
+      "end": 500,
+      "false_negative_count": 0,
+      "false_positive_count": 0,
+      "is_failure": false,
+      "length": 100,
+      "mean_depth": null,
+      "name": "demo_neutral_region",
+      "risk_overlap_bases": 0,
+      "risk_overlap_fraction": 0.0,
+      "start": 400,
+      "status": "pass"
+    }
+  ],
+  "summary": {
+    "failure_bases": 200,
+    "failure_interval_count": 2,
+    "pass_interval_count": 3,
+    "performance_interval_count": 5,
+    "risk_bases_in_universe": 400,
+    "universe_bases": 500
+  }
+}

@@ -1,0 +1,5 @@
+chrDemo	0	100	demo_high_gc_region
+chrDemo	100	200	demo_low_gc_region
+chrDemo	200	300	demo_high_gc_region_2
+chrDemo	300	400	demo_low_gc_region_2
+chrDemo	400	500	demo_neutral_region

@@ -1,0 +1,15 @@
+{
+  "min_callable_fraction": 0.9,
+  "performance_table": "research_outputs\\demo_public_benchmark\\demo_public_benchmark_performance.tsv",
+  "source_label": "demo_public_benchmark",
+  "summary": {
+    "failed_bases": 200,
+    "failure_interval_count": 2,
+    "interval_count": 5,
+    "max_callable_fraction": 1.0,
+    "mean_callable_fraction": 0.8400000000000001,
+    "min_callable_fraction": 0.4,
+    "pass_interval_count": 3,
+    "total_bases": 500
+  }
+}

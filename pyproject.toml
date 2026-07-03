@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "panel-bias-auditor-lite"
-version = "0.1.0"
-description = "Dependency-light genomic panel blind-spot and difficult-region auditor."
+version = "0.2.0"
+description = "Dependency-light genomic panel blind-spot, technical-risk and benchmark-validation auditor."
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{ name = "Panel Bias Auditor contributors" }]

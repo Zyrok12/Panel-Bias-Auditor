@@ -1,0 +1,6 @@
+chrom	start	end	name	mean_depth	callable_fraction	status	false_negative_count	false_positive_count	total_variant_count
+chrDemo	0	100	demo_high_gc_region		1.000000	pass	0	0	0
+chrDemo	100	200	demo_low_gc_region		0.400000	low_callability	0	0	0
+chrDemo	200	300	demo_high_gc_region_2		0.800000	low_callability	0	0	0
+chrDemo	300	400	demo_low_gc_region_2		1.000000	pass	0	0	0
+chrDemo	400	500	demo_neutral_region		1.000000	pass	0	0	0

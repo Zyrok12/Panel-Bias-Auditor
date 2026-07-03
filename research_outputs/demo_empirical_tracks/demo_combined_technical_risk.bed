@@ -1,0 +1,6 @@
+# Combined empirical technical-risk track.
+chrDemo	0	100	high_gc_chrDemo_0_100	type=gc_extreme,gc_class=high_gc,scope=assay_validation,curation_status=source_verified,evidence_level=assay_computable_gc,source=fasta_gcderive,min_gc=1.000,max_gc=1.000,window_count=2
+chrDemo	100	200	low_gc_chrDemo_100_200	type=gc_extreme,gc_class=low_gc,scope=assay_validation,curation_status=source_verified,evidence_level=assay_computable_gc,source=fasta_gcderive,min_gc=0.000,max_gc=0.000,window_count=2
+chrDemo	200	300	high_gc_chrDemo_200_300	type=gc_extreme,gc_class=high_gc,scope=assay_validation,curation_status=source_verified,evidence_level=assay_computable_gc,source=fasta_gcderive,min_gc=1.000,max_gc=1.000,window_count=2
+chrDemo	300	400	low_gc_chrDemo_300_400	type=gc_extreme,gc_class=low_gc,scope=assay_validation,curation_status=source_verified,evidence_level=assay_computable_gc,source=fasta_gcderive,min_gc=0.000,max_gc=0.000,window_count=2
+chrDemo	0	400	homopolymer_chrDemo_0_400	type=homopolymer,sequence_risk_class=homopolymer,scope=assay_validation,curation_status=source_verified,evidence_level=assay_computable_sequence_complexity,source=fasta_seqderive,max_homopolymer=40,max_dominant_base_fraction=1.000,window_count=10

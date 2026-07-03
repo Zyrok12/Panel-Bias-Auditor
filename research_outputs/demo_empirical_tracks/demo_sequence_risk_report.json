@@ -1,0 +1,128 @@
+{
+  "by_class": {
+    "homopolymer": {
+      "interval_count": 1,
+      "merged_bases": 400
+    }
+  },
+  "fasta": "C:\\Users\\ipery\\OneDrive\\Documents\\Project\\panel-bias-auditor-lite\\examples\\demo_reference.fa",
+  "intervals": [
+    {
+      "attrs": {
+        "curation_status": "source_verified",
+        "evidence_level": "assay_computable_sequence_complexity",
+        "max_dominant_base_fraction": "1.000",
+        "max_homopolymer": "40",
+        "scope": "assay_validation",
+        "sequence_risk_class": "homopolymer",
+        "source": "fasta_seqderive",
+        "type": "homopolymer",
+        "window_count": "10"
+      },
+      "chrom": "chrDemo",
+      "end": 400,
+      "name": "homopolymer_chrDemo_0_400",
+      "start": 0
+    }
+  ],
+  "low_complexity_fraction": 0.8,
+  "merged_bases": 400,
+  "merged_interval_count": 1,
+  "min_homopolymer": 10,
+  "regions_scanned": 1,
+  "risk_window_count": 10,
+  "step_size": 40,
+  "window_size": 40,
+  "windows": [
+    {
+      "callable_bases": 40,
+      "category": "homopolymer",
+      "chrom": "chrDemo",
+      "dominant_base_fraction": 1.0,
+      "end": 40,
+      "longest_homopolymer": 40,
+      "start": 0
+    },
+    {
+      "callable_bases": 40,
+      "category": "homopolymer",
+      "chrom": "chrDemo",
+      "dominant_base_fraction": 1.0,
+      "end": 80,
+      "longest_homopolymer": 40,
+      "start": 40
+    },
+    {
+      "callable_bases": 40,
+      "category": "homopolymer",
+      "chrom": "chrDemo",
+      "dominant_base_fraction": 0.5,
+      "end": 120,
+      "longest_homopolymer": 20,
+      "start": 80
+    },
+    {
+      "callable_bases": 40,
+      "category": "homopolymer",
+      "chrom": "chrDemo",
+      "dominant_base_fraction": 1.0,
+      "end": 160,
+      "longest_homopolymer": 40,
+      "start": 120
+    },
+    {
+      "callable_bases": 40,
+      "category": "homopolymer",
+      "chrom": "chrDemo",
+      "dominant_base_fraction": 1.0,
+      "end": 200,
+      "longest_homopolymer": 40,
+      "start": 160
+    },
+    {
+      "callable_bases": 40,
+      "category": "homopolymer",
+      "chrom": "chrDemo",
+      "dominant_base_fraction": 1.0,
+      "end": 240,
+      "longest_homopolymer": 40,
+      "start": 200
+    },
+    {
+      "callable_bases": 40,
+      "category": "homopolymer",
+      "chrom": "chrDemo",
+      "dominant_base_fraction": 1.0,
+      "end": 280,
+      "longest_homopolymer": 40,
+      "start": 240
+    },
+    {
+      "callable_bases": 40,
+      "category": "homopolymer",
+      "chrom": "chrDemo",
+      "dominant_base_fraction": 0.5,
+      "end": 320,
+      "longest_homopolymer": 20,
+      "start": 280
+    },
+    {
+      "callable_bases": 40,
+      "category": "homopolymer",
+      "chrom": "chrDemo",
+      "dominant_base_fraction": 1.0,
+      "end": 360,
+      "longest_homopolymer": 40,
+      "start": 320
+    },
+    {
+      "callable_bases": 40,
+      "category": "homopolymer",
+      "chrom": "chrDemo",
+      "dominant_base_fraction": 1.0,
+      "end": 400,
+      "longest_homopolymer": 40,
+      "start": 360
+    }
+  ]
+}

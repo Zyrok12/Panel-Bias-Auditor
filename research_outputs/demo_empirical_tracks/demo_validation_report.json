@@ -1,0 +1,22 @@
+{
+  "fail_count": 0,
+  "findings": [],
+  "metrics": {
+    "combined_interval_count": 5,
+    "combined_merged_bases": 400,
+    "gc_interval_count": 4,
+    "gc_json_interval_count": 4,
+    "sequence_json_interval_count": 1,
+    "sequence_risk_interval_count": 1
+  },
+  "paths": {
+    "combined_bed": "C:\\Users\\ipery\\OneDrive\\Documents\\Project\\panel-bias-auditor-lite\\research_outputs\\demo_empirical_tracks\\demo_combined_technical_risk.bed",
+    "gc_bed": "C:\\Users\\ipery\\OneDrive\\Documents\\Project\\panel-bias-auditor-lite\\research_outputs\\demo_empirical_tracks\\demo_gc_extremes.bed",
+    "gc_json": "C:\\Users\\ipery\\OneDrive\\Documents\\Project\\panel-bias-auditor-lite\\research_outputs\\demo_empirical_tracks\\demo_gc_report.json",
+    "sequence_bed": "C:\\Users\\ipery\\OneDrive\\Documents\\Project\\panel-bias-auditor-lite\\research_outputs\\demo_empirical_tracks\\demo_sequence_risk.bed",
+    "sequence_json": "C:\\Users\\ipery\\OneDrive\\Documents\\Project\\panel-bias-auditor-lite\\research_outputs\\demo_empirical_tracks\\demo_sequence_risk_report.json",
+    "summary_json": "C:\\Users\\ipery\\OneDrive\\Documents\\Project\\panel-bias-auditor-lite\\research_outputs\\demo_empirical_tracks\\demo_research_summary.json"
+  },
+  "status": "pass",
+  "warning_count": 0
+}
