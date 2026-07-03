@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Panel Bias Audit Report</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #5d6d7e;
+      --line: #d5dde5;
+      --soft: #f5f7fa;
+      --low: #247a3d;
+      --moderate: #946200;
+      --high: #a94700;
+      --severe: #9f1d35;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.45;
+    }
+    main {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 32px 24px 48px;
+    }
+    h1, h2, h3 { margin: 0 0 12px; }
+    h2 { margin-top: 28px; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+    .meta, .note { color: var(--muted); }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: var(--soft);
+    }
+    .metric strong { display: block; font-size: 1.35rem; margin-top: 4px; }
+    .risk {
+      color: white;
+      background: var(--severe);
+      border-radius: 8px;
+      padding: 18px;
+      margin: 16px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 20px;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: var(--soft); }
+    code { background: var(--soft); padding: 2px 4px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Panel Bias Audit Report</h1>
+  <p class="meta">Generated: <code>2026-07-03T10:27:59.642295+00:00</code> | Genome build: <code>GRCh38-demo</code> | Tool: <code>panel-bias-auditor-lite</code></p>
+
+  <section class="risk">
+    <h2 style="border:0;margin-top:0;padding:0;">Risk Score: 81.75 / 100 (severe)</h2>
+    <p>This score summarizes missing critical-region coverage, difficult-region overlap, and optional variant checks.</p>
+  </section>
+
+  <section class="summary">
+    <div class="metric">Panel<strong>single panel</strong></div>
+    <div class="metric">Panel intervals<strong>7</strong></div>
+    <div class="metric">Merged target footprint<strong>42,600 bp</strong></div>
+    <div class="metric">Critical coverage<strong>20.4%</strong></div>
+    <div class="metric">Missing critical bases<strong>164,000 bp</strong></div>
+    <div class="metric">Difficult overlap<strong>9,300 bp</strong></div>
+    <div class="metric">Variants outside panel<strong>2 / 4</strong></div>
+  </section>
+
+  <h2>Risk Components</h2>
+  <table>
+    <tr><th>Component</th><th>Value</th></tr>
+    <tr><td>critical_missing_fraction</td><td>0.7961</td></tr><tr><td>difficult_region_fraction</td><td>0.2183</td></tr><tr><td>variant_outside_panel_fraction</td><td>0.5</td></tr>
+  </table>
+
+  <h2>Recommendations</h2>
+  <table>
+    <tr><th>Priority</th><th>Category</th><th>Finding</th><th>Suggested action</th></tr>
+    <tr><td>high</td><td>critical-coverage</td><td>164,000 critical bases are missing or partially covered. Top affected regions: BRCA1_core_demo, ALK_fusion_intron_proxy_demo, MET_exon14_and_amp_proxy_demo.</td><td>Review whether these regions are biologically required for the panel claim; add probes/amplicons or narrow the assay claim.</td></tr><tr><td>medium</td><td>callability</td><td>The largest difficult-region burden is homology (5,000 bp overlap).</td><td>Treat these regions as validation priorities; confirm sensitivity, specificity, and false-negative behavior with orthogonal or truth-set data.</td></tr><tr><td>medium</td><td>variant-check</td><td>2 supplied variants fall outside the panel. Examples: chr2:29480000:A&gt;G, chr13:32350000:C&gt;T.</td><td>If these variants represent expected positives or customer requirements, revise targets or document them as out-of-scope.</td></tr>
+  </table>
+
+  <h2>Missing Or Partial Critical Regions</h2>
+  <table>
+    <tr><th>Region</th><th>Locus</th><th>Status</th><th>Covered</th><th>Missing</th></tr>
+    <tr><td>BRCA1_core_demo</td><td>chr17:43044000-43125000</td><td>missing</td><td>0</td><td>81,000</td></tr><tr><td>ALK_fusion_intron_proxy_demo</td><td>chr2:29440000-29500000</td><td>missing</td><td>0</td><td>60,000</td></tr><tr><td>MET_exon14_and_amp_proxy_demo</td><td>chr7:116770000-116800000</td><td>partial</td><td>10,000</td><td>20,000</td></tr><tr><td>TP53_core_extended_demo</td><td>chr17:7668000-7675500</td><td>partial</td><td>4,500</td><td>3,000</td></tr>
+  </table>
+
+  <h2>Difficult Region Overlap</h2>
+  <table>
+    <tr><th>Category</th><th>Overlap bases</th></tr>
+    <tr><td>homology</td><td>5,000</td></tr><tr><td>low_mappability</td><td>2,500</td></tr><tr><td>gc_extreme</td><td>1,800</td></tr>
+  </table>
+
+  <h2>Variant Checks</h2>
+  <table>
+    <tr><th>Variant</th><th>In panel</th><th>Panel regions</th><th>Critical regions</th><th>Difficult regions</th></tr>
+    <tr><td>chr7:55141478:C&gt;T</td><td>yes</td><td>EGFR_exon20_demo</td><td>EGFR_exon20_demo</td><td>EGFR_exon20_gc_proxy</td></tr><tr><td>chr17:7670700:G&gt;A</td><td>yes</td><td>TP53_core_demo</td><td>TP53_core_extended_demo</td><td>TP53_mapping_complexity_proxy</td></tr><tr><td>chr2:29480000:A&gt;G</td><td>no</td><td>-</td><td>ALK_fusion_intron_proxy_demo</td><td>ALK_large_intron_capture_risk</td></tr><tr><td>chr13:32350000:C&gt;T</td><td>no</td><td>-</td><td>-</td><td>-</td></tr>
+  </table>
+
+  <h2>Interpretation Notes</h2>
+  <p class="note">This report evaluates assay-design risk, not clinical validity. A region can be technically covered but still hard to call if it overlaps repeats, homologous sequence, GC extremes, or reference-biased loci. For commercial or clinical use, tracks must be curated, versioned, and validated against appropriate truth sets.</p>
+</main>
+</body>
+</html>

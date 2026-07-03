@@ -1,0 +1,62 @@
+{
+  "genome_build": "GRCh38-demo",
+  "panel_count": 2,
+  "results": [
+    {
+      "assay_type": "oncology",
+      "critical_coverage_fraction": 1.0,
+      "difficult_overlap_bases": 82300,
+      "difficult_region_fraction": 0.3984,
+      "interval_count": 9,
+      "merged_target_bases": 206600,
+      "missing_critical_bases": 0,
+      "name": "Demo improved oncology panel",
+      "notes": "Expanded demo panel covering all supplied critical regions",
+      "path": "examples/demo_improved_oncology_panel.bed",
+      "rank": 1,
+      "risk_label": "moderate",
+      "risk_score": 25.0
+    },
+    {
+      "assay_type": "oncology",
+      "critical_coverage_fraction": 0.20388349514563106,
+      "difficult_overlap_bases": 9300,
+      "difficult_region_fraction": 0.2183,
+      "interval_count": 7,
+      "merged_target_bases": 42600,
+      "missing_critical_bases": 164000,
+      "name": "Demo baseline oncology panel",
+      "notes": "SNV-heavy panel with deliberately partial MET/TP53 and missing ALK/BRCA1 demo regions",
+      "path": "examples/demo_oncology_panel.bed",
+      "rank": 2,
+      "risk_label": "severe",
+      "risk_score": 76.75
+    }
+  ],
+  "track_bundle": {
+    "description": "Illustrative oncology assay-risk tracks for demos only. Not a production truth set.",
+    "genome_build": "GRCh38-demo",
+    "name": "demo-oncology-assay-risk-bundle",
+    "tracks": [
+      {
+        "description": "Toy cancer hotspot, hereditary cancer, and fusion proxy regions.",
+        "license": "MIT demo data",
+        "name": "demo critical oncology regions",
+        "path": "examples/demo_critical_regions.bed",
+        "role": "critical",
+        "source": "synthetic demo coordinates",
+        "version": "0.1.0"
+      },
+      {
+        "description": "Toy low-mappability, GC, homology, and large-intron capture-risk regions.",
+        "license": "MIT demo data",
+        "name": "demo difficult assay regions",
+        "path": "examples/demo_difficult_regions.bed",
+        "role": "difficult",
+        "source": "synthetic demo coordinates",
+        "version": "0.1.0"
+      }
+    ],
+    "version": "0.1.0"
+  }
+}

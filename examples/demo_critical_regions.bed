@@ -1,0 +1,10 @@
+# Demo critical regions. Coordinates are illustrative and not a production truth set.
+chr7	55019000	55021500	EGFR_exon18_19_demo	type=oncology_hotspot
+chr7	55140000	55143000	EGFR_exon20_demo	type=oncology_hotspot
+chr17	7668000	7675500	TP53_core_extended_demo	type=tumor_suppressor
+chr12	25245000	25247000	KRAS_hotspot_demo	type=oncology_hotspot
+chr3	178916000	178936000	PIK3CA_hotspot_demo	type=oncology_hotspot
+chr7	116770000	116800000	MET_exon14_and_amp_proxy_demo	type=oncology_actionable
+chr2	29440000	29500000	ALK_fusion_intron_proxy_demo	type=fusion_relevant
+chr17	43044000	43125000	BRCA1_core_demo	type=hereditary_cancer
+

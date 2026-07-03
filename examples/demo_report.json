@@ -1,0 +1,233 @@
+{
+  "critical_regions": {
+    "coverage_fraction": 0.20388349514563106,
+    "covered_bases": 42000,
+    "missing_bases": 164000,
+    "region_count": 8,
+    "status_counts": {
+      "covered": 4,
+      "missing": 2,
+      "partial": 2
+    },
+    "total_bases": 206000
+  },
+  "difficult_regions": {
+    "by_category": {
+      "gc_extreme": 1800,
+      "homology": 5000,
+      "low_mappability": 2500
+    },
+    "by_region": [
+      {
+        "category": "homology",
+        "chrom": "chr7",
+        "difficult_region": "MET_segmental_dup_proxy",
+        "end": 116780000,
+        "overlap_bases": 5000,
+        "panel_region": "MET_partial_demo",
+        "start": 116775000
+      },
+      {
+        "category": "low_mappability",
+        "chrom": "chr17",
+        "difficult_region": "TP53_mapping_complexity_proxy",
+        "end": 7672500,
+        "overlap_bases": 2500,
+        "panel_region": "TP53_core_demo",
+        "start": 7670000
+      },
+      {
+        "category": "gc_extreme",
+        "chrom": "chr7",
+        "difficult_region": "EGFR_exon20_gc_proxy",
+        "end": 55142500,
+        "overlap_bases": 1500,
+        "panel_region": "EGFR_exon20_demo",
+        "start": 55141000
+      },
+      {
+        "category": "gc_extreme",
+        "chrom": "chr5",
+        "difficult_region": "TERT_promoter_gc_proxy",
+        "end": 1295500,
+        "overlap_bases": 300,
+        "panel_region": "TERT_promoter_demo",
+        "start": 1295200
+      }
+    ],
+    "unique_overlap_bases": 9300
+  },
+  "metadata": {
+    "generated_at": "2026-07-03T10:27:59.642295+00:00",
+    "genome_build": "GRCh38-demo",
+    "tool": "panel-bias-auditor-lite",
+    "track_bundle": {
+      "description": "Illustrative oncology assay-risk tracks for demos only. Not a production truth set.",
+      "genome_build": "GRCh38-demo",
+      "name": "demo-oncology-assay-risk-bundle",
+      "tracks": [
+        {
+          "description": "Toy cancer hotspot, hereditary cancer, and fusion proxy regions.",
+          "license": "MIT demo data",
+          "name": "demo critical oncology regions",
+          "path": "examples/demo_critical_regions.bed",
+          "role": "critical",
+          "source": "synthetic demo coordinates",
+          "version": "0.1.0"
+        },
+        {
+          "description": "Toy low-mappability, GC, homology, and large-intron capture-risk regions.",
+          "license": "MIT demo data",
+          "name": "demo difficult assay regions",
+          "path": "examples/demo_difficult_regions.bed",
+          "role": "difficult",
+          "source": "synthetic demo coordinates",
+          "version": "0.1.0"
+        }
+      ],
+      "version": "0.1.0"
+    }
+  },
+  "missing_or_partial_critical_regions": [
+    {
+      "chrom": "chr17",
+      "coverage_fraction": 0.0,
+      "covered_bases": 0,
+      "end": 43125000,
+      "length": 81000,
+      "missing_bases": 81000,
+      "name": "BRCA1_core_demo",
+      "start": 43044000,
+      "status": "missing"
+    },
+    {
+      "chrom": "chr2",
+      "coverage_fraction": 0.0,
+      "covered_bases": 0,
+      "end": 29500000,
+      "length": 60000,
+      "missing_bases": 60000,
+      "name": "ALK_fusion_intron_proxy_demo",
+      "start": 29440000,
+      "status": "missing"
+    },
+    {
+      "chrom": "chr7",
+      "coverage_fraction": 0.3333,
+      "covered_bases": 10000,
+      "end": 116800000,
+      "length": 30000,
+      "missing_bases": 20000,
+      "name": "MET_exon14_and_amp_proxy_demo",
+      "start": 116770000,
+      "status": "partial"
+    },
+    {
+      "chrom": "chr17",
+      "coverage_fraction": 0.6,
+      "covered_bases": 4500,
+      "end": 7675500,
+      "length": 7500,
+      "missing_bases": 3000,
+      "name": "TP53_core_extended_demo",
+      "start": 7668000,
+      "status": "partial"
+    }
+  ],
+  "panel": {
+    "interval_count": 7,
+    "merged_target_bases": 42600,
+    "name": null
+  },
+  "recommendations": [
+    {
+      "action": "Review whether these regions are biologically required for the panel claim; add probes/amplicons or narrow the assay claim.",
+      "category": "critical-coverage",
+      "finding": "164,000 critical bases are missing or partially covered. Top affected regions: BRCA1_core_demo, ALK_fusion_intron_proxy_demo, MET_exon14_and_amp_proxy_demo.",
+      "priority": "high"
+    },
+    {
+      "action": "Treat these regions as validation priorities; confirm sensitivity, specificity, and false-negative behavior with orthogonal or truth-set data.",
+      "category": "callability",
+      "finding": "The largest difficult-region burden is homology (5,000 bp overlap).",
+      "priority": "medium"
+    },
+    {
+      "action": "If these variants represent expected positives or customer requirements, revise targets or document them as out-of-scope.",
+      "category": "variant-check",
+      "finding": "2 supplied variants fall outside the panel. Examples: chr2:29480000:A>G, chr13:32350000:C>T.",
+      "priority": "medium"
+    }
+  ],
+  "risk": {
+    "components": {
+      "critical_missing_fraction": 0.7961,
+      "difficult_region_fraction": 0.2183,
+      "variant_outside_panel_fraction": 0.5
+    },
+    "label": "severe",
+    "score": 81.75
+  },
+  "variants": {
+    "annotations": [
+      {
+        "critical_regions": [
+          "EGFR_exon20_demo"
+        ],
+        "difficult_regions": [
+          "EGFR_exon20_gc_proxy"
+        ],
+        "filter": "PASS",
+        "id": "EGFR_pT790M_demo",
+        "inside_panel": true,
+        "panel_regions": [
+          "EGFR_exon20_demo"
+        ],
+        "qual": ".",
+        "variant": "chr7:55141478:C>T"
+      },
+      {
+        "critical_regions": [
+          "TP53_core_extended_demo"
+        ],
+        "difficult_regions": [
+          "TP53_mapping_complexity_proxy"
+        ],
+        "filter": "PASS",
+        "id": "TP53_demo",
+        "inside_panel": true,
+        "panel_regions": [
+          "TP53_core_demo"
+        ],
+        "qual": ".",
+        "variant": "chr17:7670700:G>A"
+      },
+      {
+        "critical_regions": [
+          "ALK_fusion_intron_proxy_demo"
+        ],
+        "difficult_regions": [
+          "ALK_large_intron_capture_risk"
+        ],
+        "filter": "PASS",
+        "id": "ALK_intronic_demo",
+        "inside_panel": false,
+        "panel_regions": [],
+        "qual": ".",
+        "variant": "chr2:29480000:A>G"
+      },
+      {
+        "critical_regions": [],
+        "difficult_regions": [],
+        "filter": "PASS",
+        "id": "BRCA2_outside_panel_demo",
+        "inside_panel": false,
+        "panel_regions": [],
+        "qual": ".",
+        "variant": "chr13:32350000:C>T"
+      }
+    ],
+    "count": 4,
+    "outside_panel_count": 2
+  }
+}

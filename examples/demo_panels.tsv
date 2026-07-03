@@ -1,0 +1,4 @@
+name	path	assay_type	notes
+Demo baseline oncology panel	demo_oncology_panel.bed	oncology	SNV-heavy panel with deliberately partial MET/TP53 and missing ALK/BRCA1 demo regions
+Demo improved oncology panel	demo_improved_oncology_panel.bed	oncology	Expanded demo panel covering all supplied critical regions
+

@@ -1,0 +1,27 @@
+{
+  "name": "demo-oncology-assay-risk-bundle",
+  "version": "0.1.0",
+  "genome_build": "GRCh38-demo",
+  "description": "Illustrative oncology assay-risk tracks for demos only. Not a production truth set.",
+  "tracks": [
+    {
+      "name": "demo critical oncology regions",
+      "role": "critical",
+      "path": "demo_critical_regions.bed",
+      "description": "Toy cancer hotspot, hereditary cancer, and fusion proxy regions.",
+      "source": "synthetic demo coordinates",
+      "version": "0.1.0",
+      "license": "MIT demo data"
+    },
+    {
+      "name": "demo difficult assay regions",
+      "role": "difficult",
+      "path": "demo_difficult_regions.bed",
+      "description": "Toy low-mappability, GC, homology, and large-intron capture-risk regions.",
+      "source": "synthetic demo coordinates",
+      "version": "0.1.0",
+      "license": "MIT demo data"
+    }
+  ]
+}
+

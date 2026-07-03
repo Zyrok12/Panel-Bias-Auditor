@@ -1,0 +1,3 @@
+rank	name	assay_type	risk_score	risk_label	critical_coverage_fraction	missing_critical_bases	difficult_overlap_bases	difficult_region_fraction	merged_target_bases	interval_count	path	notes
+1	Demo improved oncology panel	oncology	25.0	moderate	1.0	0	82300	0.3984	206600	9	examples/demo_improved_oncology_panel.bed	Expanded demo panel covering all supplied critical regions
+2	Demo baseline oncology panel	oncology	76.75	severe	0.20388349514563106	164000	9300	0.2183	42600	7	examples/demo_oncology_panel.bed	SNV-heavy panel with deliberately partial MET/TP53 and missing ALK/BRCA1 demo regions

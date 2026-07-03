@@ -1,0 +1,8 @@
+##fileformat=VCFv4.2
+##source=panel-bias-auditor-demo
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr7	55141478	EGFR_pT790M_demo	C	T	.	PASS	.
+chr17	7670700	TP53_demo	G	A	.	PASS	.
+chr2	29480000	ALK_intronic_demo	A	G	.	PASS	.
+chr13	32350000	BRCA2_outside_panel_demo	C	T	.	PASS	.
+

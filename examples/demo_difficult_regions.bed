@@ -1,0 +1,7 @@
+# Demo difficult regions. Coordinates are illustrative and not a production truth set.
+chr7	55141000	55142500	EGFR_exon20_gc_proxy	type=gc_extreme
+chr17	7670000	7677000	TP53_mapping_complexity_proxy	type=low_mappability
+chr7	116775000	116790000	MET_segmental_dup_proxy	type=homology
+chr5	1295200	1295500	TERT_promoter_gc_proxy	type=gc_extreme
+chr2	29440000	29500000	ALK_large_intron_capture_risk	type=fusion_large_intron
+
